@@ -18,18 +18,19 @@ const page = () => {
             <div className="studio-hero-col">
               <Copy delay={0.85}>
                 <p>
-                  We see design as more than construction. It is an ongoing
-                  dialogue between people, material, and place, shaped with
-                  care, and built to endure.
+                  Creemos que la sostenibilidad no empieza con 
+grandes inversiones. Empieza con medir bien, 
+entender los datos, y tomar decisiones informadas.
                 </p>
               </Copy>
             </div>
             <div className="studio-hero-col">
               <Copy delay={0.85}>
                 <h2>
-                  Our studio exists to create spaces that feel honest, lived in,
-                  and quietly transformative. Every project begins with
-                  listening and ends with an environment.
+                  KarbonGarbi nació para que cualquier empresa 
+industrial pueda gestionar su huella de carbono 
+sin consultores externos, sin Excel, y sin 
+perder semanas en burocracia.
                 </h2>
               </Copy>
               <div className="studio-hero-hero-img">
@@ -43,32 +44,32 @@ const page = () => {
             <div className="more-facts-items">
               <div className="fact">
                 <Copy delay={0.1}>
-                  <p>Models crafted</p>
-                  <h2>120+</h2>
+                  <p>Factores de emisión</p>
+                  <h2>200+</h2>
                 </Copy>
               </div>
               <div className="fact">
                 <Copy delay={0.2}>
-                  <p>Materials explored</p>
-                  <h2>60</h2>
+                  <p>Categorías cubiertas</p>
+                  <h2>15</h2>
                 </Copy>
               </div>
               <div className="fact">
                 <Copy delay={0.3}>
-                  <p>Workshops hosted</p>
-                  <h2>25+</h2>
+                  <p>Alcances </p>
+                  <h2>3</h2>
                 </Copy>
               </div>
               <div className="fact">
                 <Copy delay={0.4}>
-                  <p>Hours logged</p>
-                  <h2>3k+</h2>
+                  <p>Normativas</p>
+                  <h2>4</h2>
                 </Copy>
               </div>
               <div className="fact">
                 <Copy delay={0.5}>
-                  <p>Prototypes build</p>
-                  <h2>724</h2>
+                  <p>Años de datos</p>
+                  <h2>5</h2>
                 </Copy>
               </div>
             </div>
@@ -81,9 +82,11 @@ const page = () => {
         </section>
         <CTAWindow
           img="/studio/about-cta-window.jpg"
-          header="The Archive"
-          callout="Designs that speak through form"
-          description="Each project tells a story of light, material, and rhythm. Explore how ideas take shape and grow into lasting environments."
+          header="La Plataforma"
+          callout="Construida para la industria"
+          description="Cada módulo de KarbonGarbi está diseñado 
+para resolver un problema real — desde el 
+cálculo hasta el cumplimiento normativo."
         />
         <Spotlight />
       </div>

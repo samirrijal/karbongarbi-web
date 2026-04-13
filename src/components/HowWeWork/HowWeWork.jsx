@@ -112,13 +112,13 @@ const HowWeWork = () => {
           <div className="how-we-work-header-content">
             <div className="how-we-work-header-callout">
               <Copy delay={0.1}>
-                <p>Process in focus</p>
+                <p>Cómo funciona</p>
               </Copy>
             </div>
             <Copy delay={0.15}>
               <h3>
-                From first sketches to final details, our process is shaped to
-                bring clarity and rhythm
+                De la primera factura al informe regulatorio, 
+en cuatro pasos simples
               </h3>
             </Copy>
             <div className="how-we-work-steps" ref={stepsRef}>
@@ -165,12 +165,13 @@ const HowWeWork = () => {
           </div>
           <div className="how-we-work-card-copy">
             <div className="how-we-work-card-index-label">
-              <h3>Discovery / Context</h3>
+              <h3>Configura tu empresa</h3>
             </div>
             <p className="md">
-              We begin with listening and study. Site, climate, and daily
-              routines inform the brief so we can define aims, constraints, and
-              measures of success with clarity.
+              Introduce tu perfil, selecciona tus alcances 
+y fuentes de emisión. KarbonGarbi sugiere 
+automáticamente las categorías más relevantes 
+para tu sector.
             </p>
           </div>
         </div>
@@ -180,12 +181,12 @@ const HowWeWork = () => {
           </div>
           <div className="how-we-work-card-copy">
             <div className="how-we-work-card-index-label">
-              <h3>Principles / Direction</h3>
+              <h3>Ingesta de datos</h3>
             </div>
             <p className="md">
-              We set guiding principles for light, massing, and flow. Quick
-              models and diagrams test options and reveal the direction that
-              best serves the brief.
+              Sube tus facturas, importa CSV o conecta tus 
+sistemas. La IA extrae y clasifica los datos 
+automáticamente, reduciendo el trabajo manual.
             </p>
           </div>
         </div>
@@ -195,12 +196,12 @@ const HowWeWork = () => {
           </div>
           <div className="how-we-work-card-copy">
             <div className="how-we-work-card-index-label">
-              <h3>Detail / Coordination</h3>
+              <h3>Analiza y reduce</h3>
             </div>
             <p className="md">
-              We develop drawings and specifications across structure, services,
-              and joinery. Materials and samples are reviewed in natural light
-              while budget and timeline stay in view.
+              Visualiza tu huella por alcance, categoría e 
+instalación. El simulador What-If calcula el 
+impacto de cada acción antes de implementarla.
             </p>
           </div>
         </div>
@@ -210,12 +211,12 @@ const HowWeWork = () => {
           </div>
           <div className="how-we-work-card-copy">
             <div className="how-we-work-card-index-label">
-              <h3>Build / Handover</h3>
+              <h3>Exporta y cumple</h3>
             </div>
             <p className="md">
-              We oversee construction with care and precision. After final
-              review and finishing, we hand over a space that is ready to live
-              in, complete with guidance for long term care.
+              Genera el formulario MITECO prerrellenado, el 
+informe IHOBE y el CSRD E1 con un clic. Listos 
+para presentar al registro oficial.
             </p>
           </div>
         </div>
