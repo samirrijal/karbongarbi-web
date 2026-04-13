@@ -83,7 +83,7 @@
 }
 
 .menu-meta p:nth-child(1) {
-  color: var(--base-400);
+  color: var(--base-300);
   margin-bottom: 1rem;
 }
 
@@ -92,6 +92,7 @@
   overflow: hidden;
   will-change: transform;
   pointer-events: auto;
+  padding-bottom: 0.15em;
 }
 
 @media (max-width: 1000px) {

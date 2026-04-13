@@ -281,22 +281,20 @@ const Nav = () => {
             <div className="socials">
               <div className="sub-col">
                 <div className="menu-meta menu-commissions">
-                  <p>Commissions</p>
-                  <p>build@terrene.studio</p>
-                  <p>+1 (872) 441‑2086</p>
+                  <p>Demo</p>
+                  <p>hola@karbongarbi.com</p>
+                  <p>+34 (747) 438-944</p>
                 </div>
                 <div className="menu-meta">
-                  <p>Studio Address</p>
-                  <p>18 Cordova Lane</p>
-                  <p>Seattle, WA 98101</p>
+                  <p>Plataforma</p>
+                  <p>app.karbongarbi.com</p>
                 </div>
               </div>
               <div className="sub-col">
                 <div className="menu-meta">
                   <p>Social</p>
-                  <p>Instagram</p>
-                  <p>Are.na</p>
                   <p>LinkedIn</p>
+                  <p>Instagram</p>
                 </div>
               </div>
             </div>

@@ -70,7 +70,7 @@ const Footer = () => {
                     navigateWithTransition("/");
                   }}
                 >
-                  <h3>Index</h3>
+                  <h3>Inicio</h3>
                 </a>
                 <a
                   href="/studio"
@@ -79,7 +79,7 @@ const Footer = () => {
                     navigateWithTransition("/studio");
                   }}
                 >
-                  <h3>Studio</h3>
+                  <h3>Plataforma</h3>
                 </a>
                 <a
                   href="/spaces"
@@ -88,7 +88,7 @@ const Footer = () => {
                     navigateWithTransition("/spaces");
                   }}
                 >
-                  <h3>Our Spaces</h3>
+                  <h3>Precios</h3>
                 </a>
                 <a
                   href="/sample-space"
@@ -97,7 +97,7 @@ const Footer = () => {
                     navigateWithTransition("/sample-space");
                   }}
                 >
-                  <h3>One Installation</h3>
+                  <h3>Regulación</h3>
                 </a>
                 <a
                   href="/blueprints"
@@ -106,7 +106,7 @@ const Footer = () => {
                     navigateWithTransition("/blueprints");
                   }}
                 >
-                  <h3>Blueprints</h3>
+                  <h3>Blog</h3>
                 </a>
                 <a
                   href="/connect"
@@ -115,7 +115,7 @@ const Footer = () => {
                     navigateWithTransition("/connect");
                   }}
                 >
-                  <h3>Connect</h3>
+                  <h3>Contacto</h3>
                 </a>
               </Copy>
             </div>
@@ -157,8 +157,8 @@ const Footer = () => {
             <p>
               Desarrollada por — <span>Samir Rijal</span>
             </p>
-            <p>This website is using cookies.</p>
-            <p>All rights reserverd &copy; 2026</p>
+            <p>Este sitio web utiliza cookies.</p>
+            <p>Todos los derechos reservados &copy; 2026</p>
           </div>
         </div>
       </div>
