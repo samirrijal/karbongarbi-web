@@ -20,6 +20,15 @@ const HowWeWork = () => {
   const [isMobile, setIsMobile] = useState(false);
   const scrollTriggersRef = useRef([]);
 
+  useEffect(() => {
+  // Delay ScrollTrigger init until after full paint
+  const timer = setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+  
+  return () => clearTimeout(timer);
+}, []);
+
   const checkMobile = () => {
     setIsMobile(window.innerWidth <= 1000);
   };
@@ -64,43 +73,48 @@ const HowWeWork = () => {
 
     if (!container || !header || !cards) return;
 
-    if (!isMobile) {
-      const mainTrigger = ScrollTrigger.create({
-        trigger: container,
-        start: "top top",
-        endTrigger: cards,
-        end: "bottom bottom",
-        pin: header,
-        pinSpacing: false,
-      });
-      scrollTriggersRef.current.push(mainTrigger);
+    // Add this — wait for next tick after paint
+    const ctx = gsap.context(() => {
+      if (!isMobile) {
+        ScrollTrigger.refresh(); // Force recalculation
 
-      const cardElements = cards.querySelectorAll(".how-we-work-card");
-
-      cardElements.forEach((card, index) => {
-        const cardTrigger = ScrollTrigger.create({
-          trigger: card,
-          start: "top center",
-          end: "bottom center",
-          onEnter: () => setActiveStep(index),
-          onEnterBack: () => setActiveStep(index),
-          onLeave: () => {
-            if (index < cardElements.length - 1) {
-              setActiveStep(index + 1);
-            }
-          },
-          onLeaveBack: () => {
-            if (index > 0) {
-              setActiveStep(index - 1);
-            }
-          },
+        const mainTrigger = ScrollTrigger.create({
+          trigger: container,
+          start: "top top",
+          endTrigger: cards,
+          end: "bottom bottom",
+          pin: header,
+          pinSpacing: false,
         });
-        scrollTriggersRef.current.push(cardTrigger);
-      });
-    }
+        scrollTriggersRef.current.push(mainTrigger);
+
+        const cardElements = cards.querySelectorAll(".how-we-work-card");
+
+        cardElements.forEach((card, index) => {
+          const cardTrigger = ScrollTrigger.create({
+            trigger: card,
+            start: "top center",
+            end: "bottom center",
+            onEnter: () => setActiveStep(index),
+            onEnterBack: () => setActiveStep(index),
+            onLeave: () => {
+              if (index < cardElements.length - 1) {
+                setActiveStep(index + 1);
+              }
+            },
+            onLeaveBack: () => {
+              if (index > 0) {
+                setActiveStep(index - 1);
+              }
+            },
+          });
+          scrollTriggersRef.current.push(cardTrigger);
+        });
+      }
+    }, container);
 
     return () => {
-      scrollTriggersRef.current.forEach((trigger) => trigger.kill());
+      ctx.revert();
       scrollTriggersRef.current = [];
     };
   }, [isMobile]);
