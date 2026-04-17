@@ -1,6 +1,6 @@
 .featured-projects {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: var(--base-500);
   color: var(--base-100);
   padding: 1rem;

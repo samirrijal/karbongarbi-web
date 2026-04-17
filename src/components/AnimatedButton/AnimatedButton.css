@@ -61,6 +61,8 @@
   will-change: transform;
   padding-bottom: 0.2em;
   margin-bottom: -0.2em;
+  padding-right: 0.1em;
+  margin-right: -0.1em;
 }
 
 .btn:hover .circle {

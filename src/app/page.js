@@ -13,6 +13,7 @@ import Nav from "@/components/Nav/Nav";
 import ConditionalFooter from "@/components/ConditionalFooter/ConditionalFooter";
 import AnimatedButton from "@/components/AnimatedButton/AnimatedButton";
 import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
+import PricingPlans from "@/components/PricingPlans/PricingPlans";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";
 import CTAWindow from "@/components/CTAWindow/CTAWindow";
 import Copy from "@/components/Copy/Copy";
@@ -235,7 +236,7 @@ export default function Home() {
       <Nav />
       <section className="hero">
         <div className="hero-bg">
-          <img src="/home/hero.jpg" alt="" />
+          <img src="/home/hero.avif" alt="" />
         </div>
         <div className="hero-gradient"></div>
         <div className="container">
@@ -378,6 +379,21 @@ informes regulatorios automáticamente.
           </div>
         </div>
       </section>
+      <section className="pricing-container">
+        <div className="container">
+          <div className="pricing-header-callout">
+            <Copy delay={0.1}>
+              <p>Planes y precios</p>
+            </Copy>
+          </div>
+          <div className="pricing-header">
+            <Copy delay={0.15}>
+              <h2>Precios claros, sin formularios. Elige el plan que mejor se adapta a tu empresa.</h2>
+            </Copy>
+          </div>
+        </div>
+        <PricingPlans />
+      </section>
       <section className="featured-projects-container">
         <div className="container">
           <div className="featured-projects-header-callout">
@@ -392,6 +408,9 @@ informes regulatorios automáticamente.
           </div>
         </div>
         <FeaturedProjects />
+        <div className="container featured-projects-cta">
+          <AnimatedButton label="Ver KarbonGarbi en acción" route="/connect" />
+        </div>
       </section>
       <section className="client-reviews-container">
         <div className="container">
@@ -411,8 +430,8 @@ informes regulatorios automáticamente.
               <div className="gallery-callout-img gallery-callout-img-2">
                 <img src="/gallery-callout/gallery-callout-2.jpg" alt="" />
                 <div className="gallery-callout-img-content">
-                  <h3>5.000+</h3>
-                  <p>PYMEs obligadas en Euskadi</p>
+                  <h3>Alcance 3</h3>
+                  <p>Incluido desde el primer día</p>
                 </div>
               </div>
             </div>
@@ -444,6 +463,8 @@ informes regulatorios automáticamente.
         header="KarbonGarbi"
         callout="Tu huella de carbono, bajo control"
         description="Diseñada para la industria vasca. Calcula tus emisiones, gestiona tu cadena de proveedores y genera tus informes MITECO e IHOBE — todo en una plataforma."
+        ctaLabel="Empezar ahora"
+        ctaRoute="/connect"
       />
       <ConditionalFooter />
     </>

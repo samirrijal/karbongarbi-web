@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 135svh;
   overflow: hidden;
   background-color: #d3cec5;
@@ -123,7 +123,7 @@
 }
 
 .what-we-do {
-  width: 100vw;
+  width: 100%;
   height: max-content;
   color: var(--base-100);
 }
@@ -193,9 +193,44 @@
   }
 }
 
+.pricing-container {
+  position: relative;
+  width: 100%;
+  padding: 10rem 0 6rem 0;
+  color: var(--base-100);
+  overflow: hidden;
+}
+
+.pricing-container .container {
+  padding-left: clamp(1.5rem, 5vw, 6rem);
+  padding-right: clamp(1.5rem, 5vw, 6rem);
+  max-width: 1400px;
+}
+
+.pricing-container .pricing-header-callout,
+.pricing-container .pricing-header {
+  text-align: center;
+}
+
+.pricing-container .pricing-header-callout {
+  color: var(--base-350);
+  margin-bottom: 2rem;
+}
+
+.pricing-container .pricing-header {
+  width: 55%;
+  margin: 0 auto 3rem auto;
+}
+
+@media (max-width: 1000px) {
+  .pricing-container .pricing-header {
+    width: 100%;
+  }
+}
+
 .featured-projects-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   padding: 10rem 0 0 0;
   color: var(--base-100);
   overflow: hidden;
@@ -216,15 +251,29 @@
   margin: 0 auto 2rem auto;
 }
 
+.featured-projects-container .featured-projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.featured-projects-container .featured-projects-cta .btn {
+  width: 20rem;
+}
+
 @media (max-width: 1000px) {
   .featured-projects-container .featured-projects-header {
     width: 100%;
+  }
+
+  .featured-projects-container .featured-projects-cta {
+    margin-top: 2rem;
   }
 }
 
 .client-reviews-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 120svh;
   color: var(--base-100);
   padding: 4rem 0 2rem 0;
@@ -251,7 +300,7 @@
 
 .gallery-callout {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   min-height: 100svh;
   display: flex;

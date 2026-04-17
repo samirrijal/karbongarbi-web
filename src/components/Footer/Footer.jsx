@@ -1,7 +1,7 @@
 "use client";
 import "./Footer.css";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -17,9 +17,17 @@ import { RiYoutubeLine } from "react-icons/ri";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const LEGAL_LINKS = [
+  { label: "Términos", route: "/legal/terminos" },
+  { label: "Privacidad", route: "/legal/privacidad" },
+  { label: "Cookies", route: "/legal/cookies" },
+  { label: "DPA", route: "/legal/dpa" },
+];
+
 const Footer = () => {
   const { navigateWithTransition } = useViewTransition();
   const socialIconsRef = useRef(null);
+  const [lang, setLang] = useState("es");
 
   useGSAP(
     () => {
@@ -150,6 +158,51 @@ const Footer = () => {
       </div>
       <div className="footer-outro">
         <div className="container">
+          <div className="footer-legal">
+            <p className="footer-legal-entity">
+              KarbonGarbi, S.L. · CIF B00000000 · Bilbao, Bizkaia, Euskadi
+            </p>
+            <nav className="footer-legal-links" aria-label="Legal">
+              {LEGAL_LINKS.map((link) => (
+                <a
+                  key={link.route}
+                  href={link.route}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigateWithTransition(link.route);
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <div
+              className="footer-lang-switcher"
+              role="group"
+              aria-label="Idioma"
+            >
+              <button
+                type="button"
+                className={`footer-lang-option ${
+                  lang === "es" ? "active" : ""
+                }`}
+                aria-pressed={lang === "es"}
+                onClick={() => setLang("es")}
+              >
+                ES
+              </button>
+              <button
+                type="button"
+                className={`footer-lang-option ${
+                  lang === "eu" ? "active" : ""
+                }`}
+                aria-pressed={lang === "eu"}
+                onClick={() => setLang("eu")}
+              >
+                EU
+              </button>
+            </div>
+          </div>
           <div className="footer-header">
             <img src="/logos/karbongarbi-footer-logo.svg" alt="" />
           </div>

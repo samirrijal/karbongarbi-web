@@ -2,8 +2,16 @@
 import "./CTAWindow.css";
 
 import Copy from "../Copy/Copy";
+import AnimatedButton from "../AnimatedButton/AnimatedButton";
 
-const CTAWindow = ({ img, header, callout, description }) => {
+const CTAWindow = ({
+  img,
+  header,
+  callout,
+  description,
+  ctaLabel,
+  ctaRoute,
+}) => {
   return (
     <section className="cta-window">
       <div className="container">
@@ -21,6 +29,11 @@ const CTAWindow = ({ img, header, callout, description }) => {
             <Copy delay={0.1}>
               <h3>{callout}</h3>
             </Copy>
+            {ctaLabel && ctaRoute && (
+              <div className="cta-window-cta">
+                <AnimatedButton label={ctaLabel} route={ctaRoute} />
+              </div>
+            )}
           </div>
           <div className="cta-window-description">
             <Copy delay={0.1}>

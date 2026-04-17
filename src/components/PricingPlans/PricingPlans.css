@@ -1,0 +1,476 @@
+.pricing-plans {
+  --pricing-accent: #4cba64;
+  --pricing-accent-soft: rgba(76, 186, 100, 0.18);
+  --pricing-accent-border: rgba(76, 186, 100, 0.45);
+  position: relative;
+  width: 100%;
+  color: var(--base-100);
+  padding: 2rem 0 4rem 0;
+}
+
+.pricing-billing-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-billing-toggle {
+  display: inline-flex;
+  background-color: rgba(214, 229, 221, 0.04);
+  border: 1px solid rgba(214, 229, 221, 0.1);
+  border-radius: 999px;
+  padding: 0.3rem;
+  gap: 0.3rem;
+}
+
+.pricing-billing-option {
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--base-200);
+  background: transparent;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.2;
+}
+
+.pricing-billing-option:hover {
+  color: var(--base-100);
+}
+
+.pricing-billing-option.active {
+  background-color: var(--pricing-accent);
+  color: var(--base-500);
+}
+
+.pricing-billing-save {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  background-color: var(--base-400);
+  color: var(--base-100);
+  border-radius: 999px;
+}
+
+.pricing-billing-option.active .pricing-billing-save {
+  background-color: var(--base-500);
+  color: var(--pricing-accent);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* ---------- base card (Hasiera, light cream) ---------- */
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  background-color: var(--base-100);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  color: var(--base-500);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.pricing-card-badge {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--base-500);
+  color: var(--base-100);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+}
+
+.pricing-card-badge p {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.pricing-card-header {
+  margin-bottom: 1.75rem;
+}
+
+.pricing-card-header h3 {
+  font-size: 2rem;
+  letter-spacing: -0.05rem;
+  margin-bottom: 0.75rem;
+  color: var(--base-500);
+}
+
+.pricing-card-tagline {
+  color: var(--base-400);
+}
+
+.pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.pricing-price-prefix {
+  font-size: 1.125rem;
+  color: var(--base-400);
+  font-weight: 500;
+}
+
+.pricing-price-value {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.075rem;
+  line-height: 1;
+  color: var(--base-500);
+}
+
+.pricing-price-suffix {
+  font-size: 1.125rem;
+  color: var(--base-400);
+  font-weight: 500;
+}
+
+.pricing-card-pricenote {
+  font-size: 1rem;
+  color: var(--base-350);
+  margin-top: 0.75rem;
+}
+
+.pricing-card-cap {
+  border-top: 1px solid rgba(11, 28, 21, 0.12);
+  border-bottom: 1px solid rgba(11, 28, 21, 0.12);
+  padding: 1.1rem 0;
+  margin: 1.5rem 0 1.75rem 0;
+}
+
+.pricing-card-cap p:first-child {
+  color: var(--base-500);
+}
+
+.pricing-card-overage {
+  font-size: 1rem;
+  color: var(--base-400);
+  margin-top: 0.5rem;
+}
+
+.pricing-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  flex: 1;
+}
+
+.pricing-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: var(--base-500);
+}
+
+.pricing-feature-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  background-color: var(--base-500);
+  color: var(--pricing-accent);
+  font-size: 0.9rem;
+}
+
+.pricing-card-subsidy {
+  padding: 0.85rem 1rem;
+  background-color: var(--pricing-accent-soft);
+  border: 1px solid var(--pricing-accent-border);
+  border-radius: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.pricing-card-subsidy p {
+  font-size: 1rem;
+  color: var(--base-500);
+  line-height: 1.4;
+}
+
+.pricing-card-cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pricing-card-cta .btn {
+  width: 16rem;
+}
+
+/* ---------- featured card (Basoa, popping green) ---------- */
+.pricing-card.featured {
+  background-color: var(--pricing-accent);
+  border-color: transparent;
+  box-shadow: 0 1.5rem 3rem rgba(76, 186, 100, 0.25);
+}
+
+.pricing-card.featured:hover {
+  box-shadow: 0 2rem 4rem rgba(76, 186, 100, 0.35);
+}
+
+.pricing-card.featured .pricing-card-badge {
+  background-color: var(--base-500);
+  color: var(--base-100);
+}
+
+.pricing-card.featured .pricing-card-header h3,
+.pricing-card.featured .pricing-price-value,
+.pricing-card.featured .pricing-card-cap p:first-child,
+.pricing-card.featured .pricing-card-features li {
+  color: var(--base-500);
+}
+
+.pricing-card.featured .pricing-card-tagline,
+.pricing-card.featured .pricing-price-prefix,
+.pricing-card.featured .pricing-price-suffix,
+.pricing-card.featured .pricing-card-pricenote,
+.pricing-card.featured .pricing-card-overage {
+  color: rgba(11, 28, 21, 0.7);
+}
+
+.pricing-card.featured .pricing-card-cap {
+  border-top-color: rgba(11, 28, 21, 0.2);
+  border-bottom-color: rgba(11, 28, 21, 0.2);
+}
+
+.pricing-card.featured .pricing-feature-icon {
+  background-color: var(--base-500);
+  color: var(--pricing-accent);
+}
+
+.pricing-card.featured .pricing-card-subsidy {
+  background-color: rgba(11, 28, 21, 0.15);
+  border-color: rgba(11, 28, 21, 0.3);
+}
+
+.pricing-card.featured .pricing-card-subsidy p {
+  color: var(--base-500);
+}
+
+/* ---------- premium card (Industria, dark w/ accent border) ---------- */
+.pricing-card.premium {
+  background-color: var(--base-450);
+  border: 1px solid var(--pricing-accent-border);
+  color: var(--base-100);
+}
+
+.pricing-card.premium .pricing-card-header h3,
+.pricing-card.premium .pricing-price-value,
+.pricing-card.premium .pricing-card-cap p:first-child,
+.pricing-card.premium .pricing-card-features li {
+  color: var(--base-100);
+}
+
+.pricing-card.premium .pricing-card-tagline {
+  color: var(--base-200);
+}
+
+.pricing-card.premium .pricing-price-prefix,
+.pricing-card.premium .pricing-price-suffix,
+.pricing-card.premium .pricing-card-pricenote,
+.pricing-card.premium .pricing-card-overage {
+  color: var(--base-250);
+}
+
+.pricing-card.premium .pricing-card-cap {
+  border-top-color: rgba(214, 229, 221, 0.1);
+  border-bottom-color: rgba(214, 229, 221, 0.1);
+}
+
+.pricing-card.premium .pricing-feature-icon {
+  background-color: var(--pricing-accent);
+  color: var(--base-500);
+}
+
+.pricing-card.premium .pricing-card-subsidy {
+  background-color: var(--pricing-accent-soft);
+  border-color: var(--pricing-accent-border);
+}
+
+.pricing-card.premium .pricing-card-subsidy p {
+  color: var(--base-100);
+}
+
+.pricing-card.premium .pricing-card-badge {
+  background-color: var(--pricing-accent);
+  color: var(--base-500);
+}
+
+/* ---------- comparison table ---------- */
+.pricing-compare-wrap {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-compare-toggle {
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--base-200);
+  background: transparent;
+  border: 1px solid rgba(214, 229, 221, 0.2);
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.pricing-compare-toggle:hover {
+  color: var(--base-500);
+  border-color: var(--pricing-accent);
+  background-color: var(--pricing-accent);
+}
+
+.pricing-compare-table {
+  width: 100%;
+  margin-top: 2rem;
+  border: 1px solid rgba(214, 229, 221, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.pricing-compare-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid rgba(214, 229, 221, 0.06);
+}
+
+.pricing-compare-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-compare-head {
+  background-color: rgba(214, 229, 221, 0.04);
+}
+
+.pricing-compare-cell {
+  padding: 1.1rem 1.25rem;
+  font-size: 1.125rem;
+  color: var(--base-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pricing-compare-cell.label {
+  justify-content: flex-start;
+  text-align: left;
+  color: var(--base-200);
+}
+
+.pricing-compare-head .pricing-compare-cell {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--base-100);
+  padding: 1.25rem;
+}
+
+.pricing-compare-head .pricing-compare-cell.featured {
+  color: var(--pricing-accent);
+}
+
+.pricing-compare-cell.featured {
+  background-color: rgba(76, 186, 100, 0.1);
+}
+
+.compare-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.compare-icon.check {
+  background-color: var(--pricing-accent);
+  color: var(--base-500);
+}
+
+.compare-icon.cross {
+  background-color: rgba(214, 229, 221, 0.08);
+  color: var(--base-250);
+}
+
+.compare-value {
+  font-size: 1.125rem;
+  color: var(--base-100);
+}
+
+@media (max-width: 1000px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .pricing-card-header h3 {
+    font-size: 1.75rem;
+  }
+
+  .pricing-price-value {
+    font-size: 2.5rem;
+  }
+
+  .pricing-billing-option {
+    font-size: 1rem;
+    padding: 0.6rem 1.1rem;
+  }
+
+  .pricing-compare-row {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  }
+
+  .pricing-compare-cell {
+    padding: 0.85rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .pricing-compare-head .pricing-compare-cell {
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .compare-value {
+    font-size: 0.95rem;
+  }
+}

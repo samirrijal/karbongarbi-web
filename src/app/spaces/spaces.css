@@ -1,6 +1,6 @@
 .spaces .spaces-header {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 60svh;
   overflow: hidden;
   color: var(--base-100);
